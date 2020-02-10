@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- This script is our link to Vue JS, a popular newish JS framework for building interfaces -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <!-- This script is our link to the JS we wrote -->
     <script src="js/scripts.js"></script>
     <title>Document</title>
 </head>
 <body>
+
+    <!-- Inside your body tags, you'll want a div with an ID of app.
+    This ID is how we'll access the page with our javascript. -->
     <div id="app">
+        <!-- The attributes on this input element will help Vue do its job. -->
         <input v-model="password" placeholder="password" v-on:keyup="report">
-        <!-- <p>Message is: {{ password }}</p> -->
-        
+
+        <!-- This div will only display when the correct password has been entered. -->
         <div v-if="isMember"> 
             <p>Welcome, Member!</p>
             <a href="private.html">Members Page</a>

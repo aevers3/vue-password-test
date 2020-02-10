@@ -4,12 +4,11 @@ window.onload = function () {
         el: '#app',
         data: {
             password: '',
-            message: 'hey there',
             isMember: false
         },
         methods: {
             report: function() {
-                // console.log(this.password === "member");
+                // You can change the password below, if you'd like.
                 if (this.password === "member") {
                     this.isMember = true;
                     console.log('member: ', this.isMember);
